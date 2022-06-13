@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "atoapayments",
+        "password": "atoapayments@981",
+        "database": "atoapayments",
+        "host": "192.168.1.50",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "atoapayments",
+        "password": "atoapayments@981",
+        "database": "atoapayments",
+        "host": "192.168.1.50",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "atoapayments",
+        "password": "atoapayments@981",
+        "database": "atoapayments",
+        "host": "192.168.1.50",
+        "dialect": "mysql"
+    }
+}

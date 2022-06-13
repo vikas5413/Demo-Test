@@ -1,0 +1,42 @@
+{
+    "name": "atoa",
+    "version": "1.0.0",
+    "description": "payment gateway app",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app",
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
+        "lint:check": "eslint .",
+        "lint:fix": "eslint --fix ."
+    },
+    "author": "TBI",
+    "license": "ISC",
+    "dependencies": {
+        "@shopify/shopify-api": "^3.1.0",
+        "body-parser": "^1.20.0",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.1",
+        "eslint-config-prettier": "^8.5.0",
+        "express": "^4.18.1",
+        "express-session": "^1.17.3",
+        "memorystore": "^1.6.7",
+        "moment": "^2.29.3",
+        "nonce": "^1.0.4",
+        "pug": "^3.0.2",
+        "request": "^2.88.2",
+        "request-promise": "^4.2.6",
+        "sequelize": "^6.20.1",
+        "shopify-api": "^0.2.3",
+        "shopify-api-node": "^3.9.0",
+        "superagent": "^7.1.6",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.17.0",
+        "eslint-plugin-react": "^7.30.0",
+        "sequelize-cli": "^6.4.1"
+    },
+    "keywords": []
+}

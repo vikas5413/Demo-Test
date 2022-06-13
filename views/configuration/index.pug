@@ -1,0 +1,38 @@
+doctype html
+head
+  title Bootstrap Example
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css')
+  script(src='https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js')
+  script(src='https://unpkg.com/@shopify/app-bridge@2')
+  script.
+    var AppBridge = window['app-bridge'];
+    var createApp = AppBridge.default;
+    var actions = window['app-bridge'].actions;
+    var apiKey = "!{api_key}";
+    var shopOrigin = !{host};
+    var app = createApp({
+      apiKey: apiKey,
+      host: shopOrigin
+    });
+
+.border
+  .container
+    h2 ATOA Payment Settings
+    form(action='/configuration/create' method='post')
+      .form-group
+        h2 Production Integration keys
+        label.form-check-label
+          | Use Production Account (Live)
+          input#mode.float-right(type='checkbox' style='margin-left:178px;margin-top:5px' name='mode' checked=configuration.mode == 1)
+      .form-group
+        label(for='key') API Key
+        input#key.form-control(type='text' placeholder='Enter API Key' name='api_key' value=configuration.api_key)
+        input#shopName.form-control(type='hidden' name='store_id' value=configuration.store_id )
+      .form-group
+        label(for='secret') API Secret
+        input#secret.form-control(type='text' placeholder='Enter Merchant Id' name='api_secret' value=configuration.api_secret)
+      button.btn.btn-primary(type='submit') Submit
